@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    margin: 0px;
+    padding: 0px;
+}
+
+p{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body{
+    width:80%;
+    margin: 0 auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    background-color: #ffffff; 
+    /* background: url("https://images.unsplash.com/flagged/photo-1568411541886-4b008aa0a5c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"); */
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size:cover; 
+}
+/* today's weather display */
+
+.first{
+    padding:0px 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-gap:20px;
+    align-items: center;
+    justify-items: center;
+   
+}
+
+.location , .temp{
+    padding :10px;
+    text-align: center;
+    font-size: 25px;
+    border-bottom: 1px solid #ffc600; 
+}
+
+.currentDate{
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
+    border: 1px solid #ffc600; 
+}
+
+/* Weater display section start */
+.second{
+   background-color:#ffffff;
+   
+   border-radius:10px;
+   padding: 50px 10px;
+   text-align: center;
+}
+
+
+.weatherIcons{
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+   grid-gap:10px;
+   grid-gap:20px;
+   justify-items: center;
+   align-items: center;
+  
+}
+.weatherIcons img{
+    width: 50px;
+    height: 50px;;
+}
+.today{
+    display: grid;
+    grid-template-columns: 100px 200px;
+    grid-gap:5px;
+    justify-content:center;
+    align-items: center;
+    margin: 30px 0px;
+}
+.today img{
+    width:100%;
+}
+.temp img{
+    width:100px;
+}
+
+@media(max-width : 600px){
+    .today{
+        grid-template-columns: 80px 100px;
+        grid-gap:20px;
+    }
+}
+
+/* loader */
+
+.loader-06 {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+	border: 10px solid #000000;
+	border-radius: 50%;
+	animation: loader-06 1s ease-out infinite;
+}
+
+@keyframes loader-06 {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 0;
+	}
+}
